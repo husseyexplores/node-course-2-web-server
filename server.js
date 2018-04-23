@@ -18,7 +18,7 @@ app.use((req, res, next) => {
     var log = `${now}: ${req.method} ${req.url}`;
     fs.appendFileSync('server.log', log + '\n', (err) => {
         if (err) {
-            console.log('Unable to append to server.log\n', err)
+            console.log('Unable to append to server.log\n', err);
         }
     })
     next();
@@ -70,6 +70,6 @@ app.get('/bad', (req, res) => {
 // Starting/Listening app
 // const port = 3000;
 app.listen(port, () => {
-    console.log(`Server is up on port ${port}`)
+    console.log(`Server is up on port ${port}`);
 });
 
