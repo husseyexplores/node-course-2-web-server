@@ -61,6 +61,13 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/portfolio', (req, res) => {
+    res.render('portfolio.hbs', {
+        pageTitle: 'Portfolio Page',
+        message: 'Local to Remote feature/update push success using git.<br> Local > Github > Heroku'
+    })
+});
+
 app.get('/bad', (req, res) => {
     res.json({
         Error: 'Unable to handle request :('
